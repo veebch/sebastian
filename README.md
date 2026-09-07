@@ -20,3 +20,6 @@ The single tweak to the standard desktop panel is the landscape/portrait mode to
 
 I highly recommend adding some of the newer Linux terminal tools, outlined [here](https://www.veeb.ch/projects/2026-linux-commands)
 
+# Video
+
+Here it is being assembled.
