@@ -8,5 +8,5 @@ Named after a man that builds things to keep himself company.
 
 # Software
 
-The one tweak to the standard desktop panel is the landscape/portrait mode toggle. This is made with 2 things, a simple shell script placed in your $PATH and a tweak to the Panel config.
+The single tweak to the standard desktop panel is the landscape/portrait mode toggle. This is made with 2 things, a simple shell script placed in your $PATH and an edit to the Panel config.
 
