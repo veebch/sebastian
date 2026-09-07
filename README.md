@@ -11,6 +11,8 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 - Waveshare PoE carrier board for CM5
 - 3d printed enclosure/stand
 - 1 magnet
+- SSD drive
+- Cooling Fan
 
 # Software
 
