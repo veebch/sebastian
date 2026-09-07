@@ -4,7 +4,13 @@ Instructions/printable parts for a very bare bones Linux desktop computer using 
 
 Named after a man [that builds things to keep himself company](https://bladerunner.fandom.com/wiki/J.F._Sebastian).
 
-# BoM
+# Components
+
+- Raspberry Pi Touch 2 (10 inch)
+- CM5
+- Waveshare PoE carrier board for CM5
+- 3d printed enclosure/stand
+- 1 magnet
 
 # Software
 
