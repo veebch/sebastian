@@ -10,3 +10,5 @@ Named after a man that builds things to keep himself company.
 
 The single tweak to the standard desktop panel is the landscape/portrait mode toggle. This is made with 2 things, a simple shell script placed in your $PATH and an edit to the Panel config.
 
+I highly recommend adding some of the newer Linux terminal tools, outlined [here](https://www.veeb.ch/projects/2026-linux-command)
+
