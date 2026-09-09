@@ -26,7 +26,7 @@ Fit the CM5 onto the Waveshare PoE carrier board, then connect the Touch 2 displ
 
 # Software
 
-The single tweak to the standard desktop panel is the landscape/portrait mode toggle. This is made with 2 things, a simple shell script placed in your $PATH and an edit to the Panel config.
+The single tweak to the standard desktop panel is the landscape/portrait mode toggle.
 
 ## Setup
 
