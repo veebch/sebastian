@@ -73,4 +73,4 @@ I highly recommend adding some of the newer Linux terminal tools, outlined [here
 
 # Video
 
-Here it is being assembled.
+This video shows how we built ours.
