@@ -16,10 +16,11 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 - 1 magnet ([link](https://www.amazon.de/-/en/dp/B08K39Q1DL)) - holds the stand in place when you pick up the unit
 - NVME drive
 - Cooling Fan
+- 4 standoffs (to attach the cover.stl file to the carrier board/screen.
 
 # Assembly
 
-STL and FreeCAD source files for the enclosure/stand are in [3d/](3d/) - You can print `stand.stl`, `power-button.stl`, `ports-cutout.stl` and `cover.FCStd`.
+STL and FreeCAD source files for the enclosure/stand are in [3d/](3d/) - You can print `stand.stl`, `power-button.stl`, `ports-cutout.stl` and `cover.stl`. The cover can be edited in the FreeCad file `cover.FCStd`.
 
 Fit the CM5 onto the Waveshare PoE carrier board, then connect the Touch 2 display's cable to the **DSI2** port on the carrier board (this is the port `rotate-screen.sh` expects, via the `DSI-2` output name).
 
