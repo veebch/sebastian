@@ -22,7 +22,7 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 
 STL and FreeCAD source files for the enclosure/stand are in [3d/](3d/) - You can print `stand.stl`, `power-button.stl`, `ports-cutout.stl` and `cover.stl`. The stand can be edited in the FreeCad file `stand.FCStd`.
 
-Fit the CM5 onto the Waveshare PoE carrier board, then connect the Touch 2 display's cable to the **DSI2** port on the carrier board (this is the port `rotate-screen.sh` expects, via the `DSI-2` output name).
+Fit the CM5 onto the Waveshare PoE carrier board, then connect the Touch 2 display's cable to the **DSI2** port on the carrier board (this is the port `rotate-screen.sh` expects, via the `DSI-2` output name). Attach the fan (optional) then add the standoffs and attach your printed cover, ports cutout and button (lip inside the case, long end facing out). Using a nut/bolt, attach the magnet to the recess in the stand (this bit is optional too, but it stops the screen falling out of the stand when you pick it up, also, who doesn't love magnets).
 
 # Software
 
@@ -30,8 +30,17 @@ The single tweak to the standard desktop panel is the landscape/portrait mode to
 
 ## Setup
 
+Run Raspberry Pi imager to burn the latest version of raspios (desktop version) to a micro sd card. 
+
+Insert that microsd card into your waveshare carrier board and attach power to the waveshare carrier board.
+
+Copy the image from the SD card to the NVME drive (use [rpi-clone](https://github.com/geerlingguy/rpi-clone))
+
+Once that's done, power off the device, remove the micro sd card and power up again. You should boot from the NVME drive.
+
 Clone the repo:
 
+This is all to be done either in a terminal on the device or when you ssh in to the device from another computer on the same LAN.
 ```
 git clone https://github.com/veebch/sebastian.git
 cd sebastian
