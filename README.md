@@ -18,6 +18,39 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 
 The single tweak to the standard desktop panel is the landscape/portrait mode toggle. This is made with 2 things, a simple shell script placed in your $PATH and an edit to the Panel config.
 
+## Setup
+
+Clone the repo:
+
+```
+git clone https://github.com/veebch/sebastian.git
+cd sebastian
+```
+
+Copy the rotation script to `~/bin` and make it executable:
+
+```
+mkdir -p ~/bin
+cp rotate-screen.sh ~/bin/rotate-screen
+chmod +x ~/bin/rotate-screen
+```
+
+Make sure `~/bin` is on your `$PATH`. Add this to `~/.bashrc` (or `~/.profile`) if it isn't already there, then reload your shell:
+
+```
+echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Save the panel config so the rotate button shows up as a launcher:
+
+```
+mkdir -p ~/.config/wf-panel-pi
+cp wf-panel-pi.ini ~/.config/wf-panel-pi/wf-panel-pi.ini
+```
+
+Log out and back in (or restart the panel) for the new launcher to appear.
+
 I highly recommend adding some of the newer Linux terminal tools, outlined [here](https://www.veeb.ch/projects/2026-linux-commands)
 
 
