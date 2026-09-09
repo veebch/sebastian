@@ -10,7 +10,7 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 - Raspberry Pi Compute Module 5
 - Waveshare PoE carrier board for CM5
 - 3d printed enclosure/stand
-- 1 magnet
+- 1 magnet ([link](https://www.amazon.de/-/en/dp/B08K39Q1DL))
 - NVME drive
 - Cooling Fan
 
