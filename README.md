@@ -131,3 +131,5 @@ I highly recommend adding some of the newer Linux terminal tools, outlined [here
 # Contributing
 
 This is a one-off build we're sharing, not a polished product - if you spot something that could be clearer, cheaper, or better designed, fork the repo and send a PR. Building your own version and telling us what you'd change is just as welcome.
+
+Some of the docs and commits in this repo were drafted with Claude and reviewed by us before being merged - those commits are marked with a `Co-Authored-By: Claude` trailer if you want to see which ones.
