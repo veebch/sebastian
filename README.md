@@ -7,6 +7,13 @@ Instructions/printable parts for a very bare bones Linux desktop computer using 
 
 Named after a man [that builds things to keep himself company](https://bladerunner.fandom.com/wiki/J.F._Sebastian).
 
+# Use cases
+
+- A dead-simple machine for people you love who find tech intimidating - no window manager quirks, no clutter, just a screen that does what it needs to.
+- It's just Raspberry Pi OS underneath, so you can set up [RPi Connect](https://www.raspberrypi.com/software/connect/) and remote in to help out (or just check in) without them having to do anything on their end.
+- A wall-mounted or countertop kiosk - photo frame, dashboard, calendar.
+- A small, low-power desktop for someone who mostly just needs to browse, video call, and run a couple of apps.
+
 # Components
 
 - Raspberry Pi Touch 2 (10 inch)
@@ -47,7 +54,7 @@ You now need a terminal on the device itself. Either:
 
 ### 3. Move the OS onto the NVME drive
 
-The SD card is only there to get things started — everything below moves the OS onto the (much faster) NVME drive.
+The SD card is only there to get things started - everything below moves the OS onto the (much faster) NVME drive.
 
 In the terminal on the device, install and run [rpi-clone](https://github.com/geerlingguy/rpi-clone):
 
@@ -56,7 +63,7 @@ curl https://raw.githubusercontent.com/geerlingguy/rpi-clone/master/install | su
 sudo rpi-clone nvme0n1
 ```
 
-Follow the on-screen prompts to confirm the clone. Once it's finished, power off the device, remove the micro SD card, and power it back on — it should now boot from the NVME drive instead.
+Follow the on-screen prompts to confirm the clone. Once it's finished, power off the device, remove the micro SD card, and power it back on - it should now boot from the NVME drive instead.
 
 ### 4. Get this repo onto the device
 
@@ -69,7 +76,7 @@ git clone https://github.com/veebch/sebastian.git
 cd sebastian
 ```
 
-(If you'd rather avoid the command line for this bit, you can also download the repo as a zip: go to [github.com/veebch/sebastian](https://github.com/veebch/sebastian), click the green "Code" button, then "Download ZIP", and extract it — then `cd` into the extracted folder instead.)
+(If you'd rather avoid the command line for this bit, you can also download the repo as a zip: go to [github.com/veebch/sebastian](https://github.com/veebch/sebastian), click the green "Code" button, then "Download ZIP", and extract it, then `cd` into the extracted folder instead)
 
 ### 5. Install wlr-randr
 
@@ -117,3 +124,7 @@ I highly recommend adding some of the newer Linux terminal tools, outlined [here
 # Video
 
 This video shows how we built ours.
+
+# Contributing
+
+This is a one-off build we're sharing, not a polished product - if you spot something that could be clearer, cheaper, or better designed, fork the repo and send a PR. Building your own version and telling us what you'd change is just as welcome.
