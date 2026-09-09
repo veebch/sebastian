@@ -30,30 +30,59 @@ The single tweak to the standard desktop panel is the landscape/portrait mode to
 
 ## Setup
 
-Run Raspberry Pi imager to burn the latest version of raspios (desktop version) to a micro sd card. 
+### 1. Flash the OS onto a micro SD card
 
-Insert that microsd card into your waveshare carrier board and attach power to the waveshare carrier board.
+On another computer, download and install [Raspberry Pi Imager](https://www.raspberrypi.com/software/), then use it to write the latest 64-bit Raspberry Pi OS (**Desktop** version, not Lite) to a micro SD card.
 
-Copy the image from the SD card to the NVME drive (use [rpi-clone](https://github.com/geerlingguy/rpi-clone))
+Before writing, click the gear icon (or "Edit Settings") in the imager to set a hostname, username/password, and enable SSH. Doing this now means you can control the device over the network later without needing to plug a keyboard, mouse and monitor into it.
 
-Once that's done, power off the device, remove the micro sd card and power up again. You should boot from the NVME drive.
+### 2. First boot
 
-Clone the repo:
+Insert the micro SD card into the Waveshare carrier board and power it on. Give it a minute or two to boot up.
 
-This is all to be done either in a terminal on the device or when you ssh in to the device from another computer on the same LAN.
+You now need a terminal on the device itself. Either:
+
+- plug a keyboard, mouse and monitor into the device and open a terminal from the desktop, or
+- from another computer on the same network, open a terminal and run `ssh <username>@<hostname>.local`, using the username and hostname you set in Raspberry Pi Imager.
+
+### 3. Move the OS onto the NVME drive
+
+The SD card is only there to get things started — everything below moves the OS onto the (much faster) NVME drive.
+
+In the terminal on the device, install and run [rpi-clone](https://github.com/geerlingguy/rpi-clone):
+
+```
+curl https://raw.githubusercontent.com/geerlingguy/rpi-clone/master/install | sudo bash
+sudo rpi-clone nvme0n1
+```
+
+Follow the on-screen prompts to confirm the clone. Once it's finished, power off the device, remove the micro SD card, and power it back on — it should now boot from the NVME drive instead.
+
+### 4. Get this repo onto the device
+
+The rest of this guide is run from a terminal on the device, either directly or over SSH as in step 2.
+
+"Cloning" a repo just means downloading a copy of it, including its history, using the `git` command. Raspberry Pi OS comes with `git` pre-installed, so you can go straight to:
+
 ```
 git clone https://github.com/veebch/sebastian.git
 cd sebastian
 ```
 
-Install `wlr-randr`, which `rotate-screen.sh` uses to change the display orientation (not installed by default on Raspberry Pi OS):
+(If you'd rather avoid the command line for this bit, you can also download the repo as a zip: go to [github.com/veebch/sebastian](https://github.com/veebch/sebastian), click the green "Code" button, then "Download ZIP", and extract it — then `cd` into the extracted folder instead.)
+
+### 5. Install wlr-randr
+
+`rotate-screen.sh` uses `wlr-randr` to change the display orientation, and it isn't installed by default on Raspberry Pi OS:
 
 ```
 sudo apt update
 sudo apt install wlr-randr
 ```
 
-Copy the rotation script to `~/bin` and make it executable:
+### 6. Install the rotation script
+
+Copy the script into `~/bin` (a folder for your own scripts/programs) and make it executable so it can be run directly:
 
 ```
 mkdir -p ~/bin
@@ -61,14 +90,18 @@ cp rotate-screen.sh ~/bin/rotate-screen
 chmod +x ~/bin/rotate-screen
 ```
 
-Make sure `~/bin` is on your `$PATH`. Add this to `~/.bashrc` (or `~/.profile`) if it isn't already there, then reload your shell:
+### 7. Add ~/bin to your PATH
+
+`$PATH` is the list of folders the shell searches when you type a command name. Adding `~/bin` to it means you (and the panel) can run `rotate-screen` from anywhere, without typing the full path. Add this line to `~/.bashrc` (or `~/.profile`) if it isn't already there, then reload your shell:
 
 ```
 echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Save the panel config so the rotate button shows up as a launcher:
+### 8. Install the panel config
+
+This adds a rotate button to the taskbar/panel:
 
 ```
 mkdir -p ~/.config/wf-panel-pi
