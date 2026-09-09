@@ -20,7 +20,7 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 
 # Assembly
 
-STL and FreeCAD source files for the enclosure/stand are in [3d/](3d/) - You can print `stand.stl`, `power-button.stl`, `ports-cutout.stl` and `cover.stl`. The cover can be edited in the FreeCad file `cover.FCStd`.
+STL and FreeCAD source files for the enclosure/stand are in [3d/](3d/) - You can print `stand.stl`, `power-button.stl`, `ports-cutout.stl` and `cover.stl`. The stand can be edited in the FreeCad file `stand.FCStd`.
 
 Fit the CM5 onto the Waveshare PoE carrier board, then connect the Touch 2 display's cable to the **DSI2** port on the carrier board (this is the port `rotate-screen.sh` expects, via the `DSI-2` output name).
 
