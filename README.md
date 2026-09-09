@@ -132,4 +132,4 @@ I highly recommend adding some of the newer Linux terminal tools, outlined [here
 
 This is a one-off build we're sharing, not a polished product - if you spot something that could be clearer, cheaper, or better designed, fork the repo and send a PR. Building your own version and telling us what you'd change is just as welcome.
 
-Some of the documentation in this repo (this README, mainly) was drafted with Claude and reviewed by us before being merged - no code or 3D models were AI-generated. Commits with AI-drafted content are marked with a `Co-Authored-By: Claude` trailer if you want to see which ones.
+Some of the documentation in this repo (text in this README, mainly) was drafted with Claude and reviewed by us before being merged - no code, video or 3D models were AI-generated. Commits with AI-drafted content are marked with a `Co-Authored-By: Claude` trailer if you want to see which ones.
