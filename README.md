@@ -7,7 +7,7 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 # Components
 
 - Raspberry Pi Touch 2 (10 inch)
-- CM5
+- Raspberry Pi Compute Module 5
 - Waveshare PoE carrier board for CM5
 - 3d printed enclosure/stand
 - 1 magnet
