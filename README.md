@@ -10,9 +10,15 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 - Raspberry Pi Compute Module 5
 - Waveshare PoE carrier board for CM5
 - 3d printed enclosure/stand
-- 1 magnet ([link](https://www.amazon.de/-/en/dp/B08K39Q1DL))
+- 1 magnet ([link](https://www.amazon.de/-/en/dp/B08K39Q1DL)) - holds the stand in place when you pick up the unit
 - NVME drive
 - Cooling Fan
+
+# Assembly
+
+STL and FreeCAD source files for the enclosure/stand are in [3d/](3d/) — print `stand.stl`, `power-button.stl`, `ports-cutout.stl` and `cover.FCStd`.
+
+Fit the CM5 onto the Waveshare PoE carrier board, then connect the Touch 2 display's cable to the **DSI2** port on the carrier board (this is the port `rotate-screen.sh` expects, via the `DSI-2` output name).
 
 # Software
 
@@ -25,6 +31,13 @@ Clone the repo:
 ```
 git clone https://github.com/veebch/sebastian.git
 cd sebastian
+```
+
+Install `wlr-randr`, which `rotate-screen.sh` uses to change the display orientation (not installed by default on Raspberry Pi OS):
+
+```
+sudo apt update
+sudo apt install wlr-randr
 ```
 
 Copy the rotation script to `~/bin` and make it executable:
