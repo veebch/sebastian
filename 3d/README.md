@@ -14,4 +14,3 @@ Printable parts and their editable FreeCAD sources for the Sebastian enclosure/s
 - `stand.FCStd` - FreeCAD source for the stand. Edit this and re-export if you want to change `stand.stl`.
 - `cover.FCStd` - FreeCAD source for the cover. Edit this and re-export if you want to change `cover.stl`.
 
-`.FCBak` files are FreeCAD's own autosave backups and aren't tracked in this repo.
