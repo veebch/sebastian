@@ -3,7 +3,7 @@
 
 # Sebastian
 
-Instructions/printable parts for a very bare bones Linux desktop computer using the Raspberry Pi Touch 2 (10 inch), a compute module (CM5) and a Waveshare Power over Ethernet (PoE) carrier board. The PoE is not used in this project, but it's there if you need it.
+Instructions/printable parts for a very bare bones Cyberdeck/Linux desktop computer using the Raspberry Pi Touch 2 (10 inch), a compute module (CM5) and a Waveshare Power over Ethernet (PoE) carrier board. The PoE is not used in this project, but it's there if you need it.
 
 Named after a man [that builds things to keep himself company](https://bladerunner.fandom.com/wiki/J.F._Sebastian).
 # Video
