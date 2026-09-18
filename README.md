@@ -9,6 +9,7 @@ Named after a man [that builds things to keep himself company](https://bladerunn
 # Video
 
 This video shows how we built ours.
+[![YouTube](http://i.ytimg.com/vi/nDxcVeEeYJc/hqdefault.jpg)](https://www.youtube.com/watch?v=nDxcVeEeYJc)
 
 
 # Use cases
