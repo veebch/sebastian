@@ -24,7 +24,7 @@ This video shows how we built ours.
 
 - Raspberry Pi Touch 2 (10 inch)
 - Raspberry Pi Compute Module 5
-- Waveshare PoE carrier board for CM5
+- Waveshare [PoE carrier board](https://www.waveshare.com/cm5-poe-base-a.htm) for CM5
 - 3d printed enclosure/stand
 - 1 magnet ([link](https://www.amazon.de/-/en/dp/B08K39Q1DL)) - holds the stand in place when you pick up the unit
 - NVME drive
